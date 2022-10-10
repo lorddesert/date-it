@@ -2,6 +2,9 @@
 
   A minimal, full modular and accesible to do app, based on a *post*, *rating* and *archive* system. You can find any post with just 2 **clicks!**
 
+### Sidebar:
+  - We are using node **18**, it doesn't seem to work with node **16**.
+
 ## How the system works?
 
   People can leave *posts* (eg. Bug ticket) and other people can comment to help to fix the bug.
