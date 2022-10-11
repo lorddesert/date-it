@@ -1,13 +1,13 @@
 <script lang="ts">
   let sidebarIsHidden = false
+  export let handleHideSideBar: any
 
   function hideSidebar(e: any): void {
-    const sideBar = document.querySelector(".side-bar");
     const app = document.querySelector(".app");
 
-    sideBar?.classList.toggle("hidden");
     app?.classList.toggle("sidebar");
 
+    handleHideSideBar()
     sidebarIsHidden = !sidebarIsHidden
 
     if (sidebarIsHidden) e.target.style.opacity = '0.5'
@@ -26,10 +26,13 @@
 <style>
   button {
     bottom: 1rem;
+    left: 1rem;
     position: absolute;
     padding: .5em 1em;
     border-radius: 7px;
     transition: all ease 250ms;
+    color: var(--light);
+
   }
 
   button:hover {
